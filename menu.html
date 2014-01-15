@@ -1,0 +1,137 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu estilo Facebook</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <meta name="viewport" content="user-scalable=no, width: device-width" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+        <script>
+            var control = 0;
+            $(document).ready(function(){
+                $("#boton").on("click", function(){
+                    if(control === 0){//el menu se encuentra oculto
+                        //alert( "Funciona jQuery al presionar el boton!" );
+                        $('#pagina').animate({
+                            marginLeft: "240px"
+                        });
+                        control++;
+                    }else{
+                        $('#pagina').animate({
+                            marginLeft: "0"
+                        });
+                        control--;
+                    }
+                });
+            });
+        </script>
+        <style>
+            body{
+                font-family: 'Helvetica', 'Verdana';
+                margin: 0;
+            }
+            
+            article{
+                font-size: 15px;
+                padding: 20px;
+            }
+            
+            nav{
+                background-color: #32394b;
+                color: #ccc;
+                height: 480px;
+                position: absolute;
+                overflow: hidden;
+                top: 0;
+                width: 320px;
+                z-index: 5;
+            }
+            
+            li{
+                padding: 20px 10px;
+                list-style: none;
+                border-bottom: solid 2px #000;
+                border-top: solid 1px #4a5572;
+            }
+            
+            li a{
+                color: #ccc;
+                font-size: 18px;
+                text-decoration: none;
+            }
+            
+            #container{
+                height: 480px;
+                overflow: hidden;
+                width: 320px;
+            }
+            
+            #pagina{
+                background-color: #DDD;
+                position: absolute;
+                top: 0;
+                width: 320px;
+                z-index: 10;
+            }
+            
+           #marcadores{
+                background-color: #ccc;
+            }
+            
+            #boton{
+                cursor: pointer;
+                padding: 5px;
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <nav>
+                <li>
+                    <a href="">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Galería</a>
+                </li>
+                <li>
+                    <a href="">Contacto</a>
+                </li>                
+            </nav>
+            <div id="pagina">
+                <div id="marcadores">
+                    <img src="http://dl.dropboxusercontent.com/u/43775522/MenuFacebook/boton.png" id="boton">
+                </div>
+                <article>
+                    <h1>Hola</h1>
+                    <p>
+                        Las hojas de estilo en cascada o (Cascading Style Sheets, o sus siglas CSS) 
+                        hacen referencia a un lenguaje de hojas de estilos usado para describir la 
+                        presentación semántica (el aspecto y formato) de un documento escrito en lenguaje de marcas. 
+                        Su aplicación más común es dar estilo a páginas webs escritas en lenguaje HTML y XHTML, 
+                        pero también puede ser aplicado a cualquier tipo de documentos XML, incluyendo SVG y XUL.
+                    </p>
+                    <h2>Mundo</h2>
+                    <p>
+                        CSS tiene una sintaxis muy sencilla, que usa unas cuantas palabras clave tomadas 
+                        del inglés para especificar los nombres de varias propiedades de estilo. 
+                        Una hoja de estilo se compone de una lista de reglas. 
+                        Cada regla o conjunto de reglas consiste en uno o más selectores y un bloque de 
+                        declaración (o "bloque de estilo") con los estilos a aplicar para los elementos 
+                        del documento que cumplan con el selector que les precede. 
+                        Cada bloque de estilos se define entre llaves, y está formado por una o varias 
+                        declaraciones de estilo con el formato propiedad:valor;
+                        En el CSS, los selectors marcarán qué elementos se verán afectados por cada 
+                        bloque de estilo que les siga, pudiendo afectar a uno o varios elementos a la vez, 
+                        en función de su tipo, nombre (name), ID, clase (class), posición dentro del Document 
+                        Object Model.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </body>
+</html>
